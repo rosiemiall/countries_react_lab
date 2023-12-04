@@ -3,9 +3,14 @@ const CountryListContainer = ({listOfCountries}) => {
 
     return ( 
         <>
-            <h1>Countries To Visit</h1>
-            <CountryList listOfCountries={listOfCountries}/> 
-    
+            <section>
+                <h1>Countries To Visit</h1>
+                <CountryList listOfCountries={listOfCountries}/> 
+            </section>
+            <section>
+                <h1>Countries Visited</h1>
+                {/* <CountryList listOfCountries={listOfCountries}/>  */}
+            </section>
         </>
      );
 }

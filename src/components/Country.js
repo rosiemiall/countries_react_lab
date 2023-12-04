@@ -2,6 +2,8 @@ const Country = ({ country }) => {
   const handleCheckbox = (e) => {
     console.log("check");
   };
+
+  
   return (
     <>
       <li> {country.name.common}</li>

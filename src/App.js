@@ -28,7 +28,8 @@ function App() {
   return(
     <>
         {listOfCountries ? <CountryListContainer listOfCountries= {listOfCountries}/> : <p> Loading countries...</p>}
-        {/* <CountryListContainer listOfCountries={listOfCountries}/> */}
+
+        {/* <CountryList listOfCountries={listOfCountries}/> */}
   
     </>
   );
