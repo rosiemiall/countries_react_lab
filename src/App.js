@@ -26,13 +26,15 @@ function App() {
   // })
   // const visitedList = [];
 
-  const visitCountry = (country) => {
-    setVisitedListOfCountries([...visitedListOfCountries, country])
-    // setListOfCountries(listOfCountries.splice[0,1])
+  const visitCountry = (countryToDelete) => {
+    removeCountry(countryToDelete)
+    
+    setVisitedListOfCountries([...visitedListOfCountries, countryToDelete])
   }
 
-  const removeCountry = (country) => {
-    return listOfCountries.splice(0,1)
+  const removeCountry = (countryToDelete) => {
+    const updatedCountries = listOfCountries.filter(country => country !== countryToDelete)
+    setListOfCountries(updatedCountries)
   }
 
   return(
