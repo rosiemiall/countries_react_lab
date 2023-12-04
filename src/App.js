@@ -20,11 +20,7 @@ function App() {
     loadCountryData();
   }, []);
 
-// loop through countries and pass each as a prop to country.js
-  // const toVisitList = listOfCountries.map((country) => {
-  //   return <li><Country country = {country} /> </li>
-  // })
-  // const visitedList = [];
+
 
   const visitCountry = (countryToDelete) => {
     removeCountry(countryToDelete)
@@ -41,8 +37,6 @@ function App() {
     <>
     
         {listOfCountries ? <CountryListContainer listOfCountries= {listOfCountries} visitedListOfCountries={visitedListOfCountries} visitCountry={visitCountry}/> : <p> Loading countries...</p>}
-        {/* {toVisitList} */}
-        {/* <CountryList listOfCountries={listOfCountries}/> */}
     
     </>
   );
