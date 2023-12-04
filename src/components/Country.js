@@ -1,6 +1,6 @@
-const Country = ({ country }) => {
+const Country = ({ country, visitCountry }) => {
   const handleCheckbox = (e) => {
-    console.log("check");
+    visitCountry(country)
   };
 
   

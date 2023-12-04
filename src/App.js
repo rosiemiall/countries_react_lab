@@ -8,6 +8,7 @@ import Country from './components/Country';
 function App() {
   // fetch countries from API and store in State
   const [listOfCountries, setListOfCountries]= useState(null);
+  const [visitedListOfCountries, setVisitedListOfCountries] = useState([]);
 
   const loadCountryData = async () => {
     const response = await fetch("https://restcountries.com/v3.1/all")
@@ -25,10 +26,14 @@ function App() {
   // })
   // const visitedList = [];
 
+  const visitCountry = (country) => {
+    setVisitedListOfCountries([...visitedListOfCountries, country])
+  }
+
   return(
     <>
-        {listOfCountries ? <CountryListContainer listOfCountries= {listOfCountries}/> : <p> Loading countries...</p>}
-
+        {listOfCountries ? <CountryListContainer listOfCountries= {listOfCountries} visitedListOfCountries={visitedListOfCountries} visitCountry={visitCountry}/> : <p> Loading countries...</p>}
+        {/* {toVisitList} */}
         {/* <CountryList listOfCountries={listOfCountries}/> */}
   
     </>
