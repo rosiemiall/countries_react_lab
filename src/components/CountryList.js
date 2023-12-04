@@ -3,13 +3,13 @@ import Country from "./Country";
 const CountryList = ({listOfCountries}) => {
 
     const toVisitList = listOfCountries.map((country) => {
-        return <div><Country country = {country} /> </div>
+        return <li><Country country = {country} /> </li>
     })
 
 
     return ( 
         <>
-            <section> {toVisitList} </section>
+            <ul> {toVisitList} </ul>
         </>
      );
 }

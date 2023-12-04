@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import './App.css';
 import CountryListContainer from './containers/CountryListContainer';
+import CountryList from './components/CountryList';
+import Country from './components/Country';
 
 
 function App() {
@@ -18,12 +20,16 @@ function App() {
   }, []);
 
 // loop through countries and pass each as a prop to country.js
-// if listOfCountries !null ?
+  // const toVisitList = listOfCountries.map((country) => {
+  //   return <li><Country country = {country} /> </li>
+  // })
+  // const visitedList = [];
 
-  return (
+  return(
     <>
-    {listOfCountries ? <CountryListContainer listOfCountries={listOfCountries}/> : <p> Loading countries...</p>}
-    {/* <CountryListContainer listOfCountries={listOfCountries}/> */}
+        {listOfCountries ? <CountryListContainer listOfCountries= {listOfCountries}/> : <p> Loading countries...</p>}
+        {/* <CountryListContainer listOfCountries={listOfCountries}/> */}
+  
     </>
   );
 }
