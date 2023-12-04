@@ -1,12 +1,12 @@
 const Country = ({ country, visitCountry }) => {
   const handleCheckbox = (e) => {
-    visitCountry(country)
+    visitCountry(country);
   };
 
-  
   return (
     <>
-      <li> {country.name.common}</li>
+      {country.flag}
+      {country.name.common}
       <input type="checkbox" onInput={(e) => handleCheckbox(e)}></input>
     </>
   );

@@ -3,7 +3,7 @@ import Country from "./Country";
 const CountryList = ({listOfCountries, visitCountry}) => {
 
     const toVisitList = listOfCountries.map((country) => {
-        return <li><Country country = {country} visitCountry={visitCountry}/> </li>
+        return <p className="country"><Country country = {country} visitCountry={visitCountry}/> </p>
     })
 
     // handle check

@@ -8,14 +8,14 @@ const CountryListContainer = ({listOfCountries, visitedListOfCountries, visitCou
     // })
     return ( 
         <>
-            <section>
-                <h1>Countries To Visit</h1>
+            <section className="section">
+                <h1 className="title">Countries To Visit 📌</h1>
                 <CountryList listOfCountries={listOfCountries} visitCountry={visitCountry}/>
 
                 {/* {toVisitList} */}
             </section>
-            <section>
-                <h1>Countries Visited</h1>
+            <section className="section">
+                <h1 className="title">Countries Visited 🗺️</h1>
                 <VisitedCountryList visitedListOfCountries={visitedListOfCountries}/>
             </section>
         </>

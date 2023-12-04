@@ -2,7 +2,7 @@ import Country from "./Country";
 
 const VisitedCountryList = ({visitedListOfCountries}) => {
     const visitedList = visitedListOfCountries.map((country) => {
-        return <li><Country country = {country}/> </li>
+        return <p className="country"><Country country = {country}/> </p>
     })
 
     // handle check

@@ -28,14 +28,20 @@ function App() {
 
   const visitCountry = (country) => {
     setVisitedListOfCountries([...visitedListOfCountries, country])
+    // setListOfCountries(listOfCountries.splice[0,1])
+  }
+
+  const removeCountry = (country) => {
+    return listOfCountries.splice(0,1)
   }
 
   return(
     <>
+    
         {listOfCountries ? <CountryListContainer listOfCountries= {listOfCountries} visitedListOfCountries={visitedListOfCountries} visitCountry={visitCountry}/> : <p> Loading countries...</p>}
         {/* {toVisitList} */}
         {/* <CountryList listOfCountries={listOfCountries}/> */}
-  
+    
     </>
   );
 }
